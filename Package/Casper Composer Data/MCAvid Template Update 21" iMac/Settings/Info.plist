@@ -33,7 +33,7 @@
 	<key>IFPkgFlagRelocatable</key>
 	<false/>
 	<key>IFPkgFlagRestartAction</key>
-	<string>None</string>
+	<string>RequiredLogout</string>
 	<key>IFPkgFlagRootVolumeOnly</key>
 	<false/>
 	<key>IFPkgFlagUpdateInstalledLanguages</key>

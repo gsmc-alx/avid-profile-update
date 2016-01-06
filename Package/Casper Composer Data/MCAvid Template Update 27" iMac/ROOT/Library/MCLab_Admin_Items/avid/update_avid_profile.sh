@@ -1,13 +1,14 @@
 #!/bin/bash
 
 scriptLoc="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-templateArchiveName="Gold-21iMac.zip"
+templateArchiveName="Gold-27iMac.zip"
 templateDirName=${templateArchiveName/.zip}
 remotefileURL="http://192.168.20.19/Avid_Settings/$templateArchiveName"
 zipDownload="${scriptLoc}/download/"
 zipLocal="${scriptLoc}/template"
 me=$(whoami)
 profilePath="/Users/Shared/AvidMediaComposer/Avid Users/$me"
+
 
 # Attempt download of archive from server to temporary location
 echo "Attempting to download AVID template from $remotefileURL"
@@ -22,12 +23,10 @@ then
 	mv -vf "$zipDownload/$templateArchiveName" "$zipLocal/$templateArchiveName"
 else
 	echo "Unable to download remote archive. Will continue copying locally-saved archive"
-	# Remove 0k file
-	rm -f "$zipDownload/$templateArchiveName"
 fi
 
 # Check archive exists at permanent storage location
-if [ -f "$zipLocal/$templateArchiveName" ] && [ -s "$zipLocal/$templateArchiveName" ]
+if [ -e "$zipLocal/$templateArchiveName" ] && [ -s "$zipLocal/$templateArchiveName" ]
 then
 	# Make AVID profile dir if not present
 	mkdir -p "$profilePath"
