@@ -6,7 +6,9 @@ templateDirName=${templateArchiveName/.zip}
 remotefileURL="http://158.223.89.4/system_setup/$templateArchiveName"
 zipDownload="${scriptLoc}/download/"
 zipLocal="${scriptLoc}/template"
-profilePath="/Users/adrin009"
+me=$(whoami)
+profilePath="/Users/Shared/AvidMediaComposer/Avid Users/$me"
+
 
 # Attempt download of archive from server to temporary location
 echo "Attempting to download AVID template from $remotefileURL"
@@ -26,8 +28,12 @@ fi
 # Check archive exists at permanent storage location
 if [ -e "$zipLocal/$templateArchiveName" ] && [ -s "$zipLocal/$templateArchiveName" ]
 then
+	# Make AVID profile dir if not present
+	mkdir -p "$profilePath"
 	# Remove existing AVID template dir
 	rm -fr "$profilePath/$templateDirName"
+	# Change owner profile dir
+	chown -R $me "profilePath"
 	# Unzip archive to AVID profile location (over-writes)
 	unzip -o -d "$profilePath" "$zipLocal/$templateArchiveName"
 	# Remove annoying extraneous directory
