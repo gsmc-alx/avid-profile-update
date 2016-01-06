@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleGetInfoString</key>
-	<string>MCAvid Template Update</string>
+	<string>MCAvid Template Update 21 iMac</string>
 	<key>CFBundleIdentifier</key>
-	<string>mcavidtemplateupdate</string>
+	<string>mcavidtemplateupdate21imac</string>
 	<key>CFBundleName</key>
-	<string>MCAvid Template Update</string>
+	<string>MCAvid Template Update 21" iMac</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1</string>
 	<key>IFMajorVersion</key>
@@ -25,7 +25,7 @@
 	<key>IFPkgFlagInstallFat</key>
 	<false/>
 	<key>IFPkgFlagInstalledSize</key>
-	<integer>0</integer>
+	<integer>366</integer>
 	<key>IFPkgFlagIsRequired</key>
 	<false/>
 	<key>IFPkgFlagOverwritePermissions</key>
@@ -33,7 +33,7 @@
 	<key>IFPkgFlagRelocatable</key>
 	<false/>
 	<key>IFPkgFlagRestartAction</key>
-	<string>RequiredLogout</string>
+	<string>None</string>
 	<key>IFPkgFlagRootVolumeOnly</key>
 	<false/>
 	<key>IFPkgFlagUpdateInstalledLanguages</key>
